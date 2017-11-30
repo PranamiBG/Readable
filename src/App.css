@@ -26,7 +26,7 @@
 
 .content {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 25px;
   word-spacing: 80px;
   margin-right: 50px;
   background-color: #4cAF50;
@@ -38,6 +38,17 @@
 
 .content-main {
   text-align: center;
+}
+
+.posts {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 40px
+}
+
+.post-body {
+    margin-bottom: 20px;
+    font-size: 1.2em
 }
 
 @keyframes App-logo-spin {

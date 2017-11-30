@@ -13,3 +13,9 @@ export const getCategories = () =>
 fetch('http://localhost:3001/categories', {headers})
   .then(res => res.json())
   .then(data => data)
+
+
+export const getPosts = () =>
+fetch('http://localhost:3001/posts', {headers})
+  .then(res => res.json())
+  .then(data => data)
