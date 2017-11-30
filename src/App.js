@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Text from './text';
 import * as readableAPI from './readableAPI.js'
 
 
