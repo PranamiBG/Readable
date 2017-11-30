@@ -3,14 +3,23 @@ import './App.css';
 import * as readableAPI from './readableAPI.js'
 
 
-
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      category: []
+    }
+  }
 
 componentDidMount() {
   readableAPI.getCategories().then(category => {
     if (category) {
-        category.categories.map(value => console.log(value.name))
+      const categoryNames = category.categories.map(category => {
+        return category.name
+        })
+        this.setState({ category: categoryNames}, () => {console.log(this.state.category)})
     }
+    console.log(this.state.category[2])
   })
 }
 
@@ -22,17 +31,15 @@ componentDidMount() {
       </div>
 
       <div className="content-main">
-      <button className="content">
-        React
-      </button>
 
-      <button className="content">
-        Redux
-      </button>
 
-      <button className="content">
-        Udacity
-      </button>
+
+        {this.state.category.map(category =>
+          <button className="content">
+            {category}
+          </button>
+        )}
+
       </div>
 
       </div>
