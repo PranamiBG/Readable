@@ -19,7 +19,8 @@ componentDidMount() {
         this.setState({ category : categoryNames }, () => {console.log(this.state.category)})
     }
     console.log(this.state.category[2])
-  })
+  });
+
 
   readableAPI.getPosts().then(posts => {
     const postBody = posts.map(post => {return post.body})
@@ -45,7 +46,7 @@ componentDidMount() {
 
         <div className="App">
           Posts
-        </div>  
+        </div>
 
         <div className="posts">
         {this.state.posts.map(post =>
